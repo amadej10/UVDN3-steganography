@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="js/steganography.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Steganography</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row p-3">
+      <div class="col-12">
+        <h1>Steganography</h1>
+      </div>
+    </div>
+    <div class="row p-3">
+      <div class="col-12">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="imgUpload" accept="image/x-png,image/gif,image/jpeg">
+          <label id="imgLabel" class="custom-file-label" for="imgUpload">Select an image to encode or decode</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="row p-3">
+      <div class="col-12">
+        <img class="mx-auto d-block" id="imgPlaceholder" />
+        <div class="d-flex justify-content-center" style="padding-top: 30px">
+          <a id="download" data-toggle="tooltip" data-placement="top" title="Download encoded image" class="btn btn-outline-primary text-primary d-none" download="encoded.png"
+            rel="nofollow">Download</a>
+        </div>
+      </div>
+
+    </div>
+    <div id="inputsView" class="d-none">
+      <div id="decodeView" class="row p-3">
+        <div class="col-12 ">
+          <div class="progress" style="margin-bottom: 6px">
+            <div id="txtCapacity" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="input-group">
+            <div id="messageArea" class="d-none">
+              <div id="message" class="d-none"></div>
+            </div>
+
+            <div class="input-group-prepend">
+              <span class="input-group-text">Message</span>
+            </div>
+            <textarea rows="5" class="form-control" aria-label="Message" id="text"></textarea>
+            <div class="invalid-feedback">
+              Image text capacity is full.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="codeDecode" class="row p-3">
+        <div class="col-12 ">
+          <button id="encodeBtn" type="button" class="btn btn-primary btn-lg btn-block">Encode</button>
+          <button id="decodeBtn" type="button" class="btn btn-secondary btn-lg btn-block">Decode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/steganography.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
